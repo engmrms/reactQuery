@@ -1,0 +1,103 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  //"extends": ["wesbos"],
+  "extends": ["wesbos", "wesbos/typescript", "prettier", "@typescript-eslint"],
+  "parserOptions": {
+    "sourceType": "module",
+    "tsconfigRootDir": ".",
+    "project": ["./tsconfig.eslint.json"]
+  },
+  "plugins": ["react", "simple-import-sort", "prettier"],
+  "globals": {
+    "cy": true,
+    "Cypress": true,
+    "context": true
+  },
+  "rules": {
+    "@typescript-eslint/no-unsafe-assignment": 0,
+    "@typescript-eslint/no-unsafe-argument": 0,
+    "@typescript-eslint/no-unsafe-member-access": 0,
+    "@typescript-eslint/no-unsafe-call": 0,
+
+    "no-empty": ["warn"],
+    "quotes": 0,
+    "no-magic-numbers": "warn",
+    "camelcase": "warn",
+    "no-unused-expressions": 0,
+    "spaced-comment": "warn",
+    "complexity": ["warn", { "max": 10 }],
+    "import/order": ["warn"],
+    "jsx-a11y/label-has-for": "off",
+    "no-lonely-if": "warn",
+    "object-shorthand": ["warn", "always"],
+    "guard-for-in": "warn",
+    "prefer-template": "warn",
+    "lines-between-class-members": "warn",
+    "jsx-a11y/click-events-have-key-events": "warn",
+    "jsx-a11y/no-noninteractive-element-interactions": "warn",
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "no-nested-ternary": "warn",
+    "react/forbid-prop-types": 0,
+    "react/prop-types": 0,
+    "react/jsx-boolean-value": ["warn"],
+    "react/button-has-type": "warn",
+    "dot-notation": "warn",
+    "no-var": "warn",
+    "react/destructuring-assignment": "warn",
+    "no-use-before-define": ["warn", { "functions": true, "classes": true }],
+    "arrow-body-style": ["warn", "as-needed"],
+    "import/no-useless-path-segments": "warn",
+    "import/newline-after-import": "warn",
+    "import/no-duplicates": "warn",
+    "import/no-cycle": "warn",
+    "no-unneeded-ternary": "warn",
+    "import/no-unresolved": 0,
+    "no-else-return": "warn",
+    "react/jsx-curly-brace-presence": "warn",
+    "react/jsx-fragments": "warn",
+    "react/self-closing-comp": "warn",
+    "react/no-did-update-set-state": "warn",
+    "react/sort-comp": "warn",
+    "react/state-in-constructor": "warn",
+    "no-restricted-syntax": [1, "ForInStatement", "LabeledStatement", "WithStatement"],
+    "jsx-a11y/no-static-element-interactions": [
+      "warn",
+      { "handlers": ["onClick", "onMouseDown", "onMouseUp", "onKeyPress", "onKeyDown", "onKeyUp"] }
+    ],
+    "no-shadow": [
+      "warn",
+      {
+        "hoist": "all",
+        "allow": ["resolve", "reject", "done", "next", "err", "error"]
+      }
+    ],
+    "jsx-a11y/label-has-associated-control": 0,
+    "prefer-const": [
+      "warn",
+      {
+        "destructuring": "all"
+      }
+    ],
+    "simple-import-sort/imports": "warn",
+    "simple-import-sort/exports": "warn",
+    "prettier/prettier": [
+      "warn",
+      {
+        "printWidth": 150,
+        "tabWidth": 2,
+        "semi": true,
+        "singleQuote": false,
+        "bracketSpacing": true,
+        "bracketSameLine": true,
+        "useTabs": false,
+        "endOfLine": "auto",
+        "arrowParens": "avoid",
+        "const": false,
+        "plugins": ["./node_modules/prettier-plugin-tailwindcss"]
+      }
+    ]
+  }
+}
